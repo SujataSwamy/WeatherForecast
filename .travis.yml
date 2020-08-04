@@ -26,8 +26,7 @@ cache:
     - "$HOME/.gradle/caches/"
     - "$HOME/.gradle/wrapper/"
 before_install:
-  - openssl aes-256-cbc -K $encrypted_783d9be09488_key -iv $encrypted_783d9be09488_iv -in travis-ci-demo-4efee-a0e3092d8cd2.json.enc -out travis-ci-demo-4efee-a0e3092d8cd2.json -d
-  #  - echo y | sdkmanager "ndk-bundle"
+  - openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv -in google-services.json.enc -out google-services.json -d  #  - echo y | sdkmanager "ndk-bundle"
   - yes | sdkmanager "platforms;android-28"
   - mkdir "$ANDROID_HOME/licenses" || true
 #  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
