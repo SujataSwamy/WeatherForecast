@@ -35,4 +35,6 @@ before_script:
 script: "./firebase1.sh"
 env.global:
 - openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv
+  -in google-services.json.enc -out /tmp/google-services.json -d
+- openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv
   -in google-services.json.enc -out google-services.json -d
