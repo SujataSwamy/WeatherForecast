@@ -30,9 +30,10 @@ before_script:
 - gcloud version || true
 - gcloud version
 - gcloud config set account sujata.swamy@airfi.aero
-- gcloud auth activate-service-account travis-ci-demo-2@travis-ci-demo-4efee.iam.gserviceaccount.com
-  --key-file=travis-ci-demo-4efee-a0e3092d8cd2.json --project=travis-ci-demo-4efee
-script: "./firebase1.sh"
+- gcloud auth activate-service-account --key-file /tmp/google-services.json
+#- gcloud auth activate-service-account travis-ci-demo-2@travis-ci-demo-4efee.iam.gserviceaccount.com
+#  --key-file=travis-ci-demo-4efee-a0e3092d8cd2.json --project=travis-ci-demo-4efee
+#script: "./firebase1.sh"
 env.global:
 - openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv
   -in google-services.json.enc -out /tmp/google-services.json -d
