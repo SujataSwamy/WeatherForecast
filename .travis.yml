@@ -29,9 +29,8 @@ before_script:
 - gcloud version || true
 - gcloud version
 - gcloud config set account sujata.swamy@airfi.aero
-- gcloud auth activate-service-account --key-file /tmp/google-services.json
-#- gcloud auth activate-service-account firebase-adminsdk-s9hkv@weatherforecast-d2654.iam.gserviceaccount.com
-#  --key-file=/tmp/google-services.json --project=weatherforecast-d2654
+- gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-61fb91a5b94b.json
+
 
 #script: "./firebase1.sh"
 env.global:
