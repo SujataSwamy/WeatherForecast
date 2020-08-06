@@ -26,10 +26,10 @@ before_install:
 - mkdir "$ANDROID_HOME/licenses" || true
 before_script:
 - env
-#- gcloud version || true
-#- gcloud version
-#- gcloud config set account sujata.swamy@airfi.aero
-#- gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-61fb91a5b94b.json
+- gcloud version || true
+- gcloud version
+- gcloud config set account sujata.swamy@airfi.aero
+- gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-61fb91a5b94b.json
 #- gcloud firebase test android models list
 #- gcloud firebase test android versions list
 #
