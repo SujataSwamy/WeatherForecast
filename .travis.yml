@@ -30,6 +30,14 @@ before_script:
 - gcloud version
 - gcloud config set account sujata.swamy@airfi.aero
 - gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-61fb91a5b94b.json
+  - env
+  - gcloud version || true
+
+  - gcloud version
+
+  - gcloud config set account sujatagopalswamy@gmail.com
+  - gcloud auth activate-service-account weatherforecastdemo@weatherforecast-d2654.iam.gserviceaccount.com --key-file=t /tmp/weatherforecast-d2654-61fb91a5b94b.json --project=weatherforecast-d2654
+
 #- gcloud firebase test android models list
 #- gcloud firebase test android versions list
 #
