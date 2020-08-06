@@ -18,7 +18,7 @@ gcloud config set project weatherforecast-d2654
 
 # Activate cloud credentials
 
-  - gcloud auth activate-service-account weatherforecastdemo@weatherforecast-d2654.iam.gserviceaccount.com --key-file=/tmp/weatherforecast-d2654-4cca52839c71.json --project=weatherforecast-d2654
+gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-4cca52839c71.json
 
 # List available options for logging purpose only (so that we can review available options)
 
