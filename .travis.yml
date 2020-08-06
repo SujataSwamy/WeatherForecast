@@ -25,11 +25,11 @@ before_install:
 - yes | sdkmanager "platforms;android-28"
 - mkdir "$ANDROID_HOME/licenses" || true
 before_script:
-- env
-- gcloud version || true
-- gcloud version
-- gcloud config set account sujata.swamy@airfi.aero
-- gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-61fb91a5b94b.json
+#- env
+#- gcloud version || true
+#- gcloud version
+#- gcloud config set account sujata.swamy@airfi.aero
+#- gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-61fb91a5b94b.json
   - env
   - gcloud version || true
 
