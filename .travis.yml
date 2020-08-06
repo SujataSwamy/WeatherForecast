@@ -21,7 +21,7 @@ cache:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
 before_install:
-- openssl aes-256-cbc -K $encrypted_6ccb8a696b2d_key -iv $encrypted_6ccb8a696b2d_iv -in weatherforecast-d2654-61fb91a5b94b.json.enc -out /tmp/weatherforecast-d2654-61fb91a5b94b.json -d
+- openssl aes-256-cbc -K $encrypted_6ccb8a696b2d_key -iv $encrypted_6ccb8a696b2d_iv -in weatherforecast-d2654-4cca52839c71.json.enc -out /tmp/weatherforecast-d2654-4cca52839c71.json -d
 - yes | sdkmanager "platforms;android-28"
 - mkdir "$ANDROID_HOME/licenses" || true
 before_script:
@@ -36,7 +36,7 @@ before_script:
   - gcloud version
 
   - gcloud config set account sujatagopalswamy@gmail.com
-  - gcloud auth activate-service-account weatherforecastdemo@weatherforecast-d2654.iam.gserviceaccount.com --key-file= /tmp/weatherforecast-d2654-61fb91a5b94b.json --project=weatherforecast-d2654
+  - gcloud auth activate-service-account weatherforecastdemo@weatherforecast-d2654.iam.gserviceaccount.com --key-file /tmp/weatherforecast-d2654-4cca52839c71.json.json --project=weatherforecast-d2654
 
 #- gcloud firebase test android models list
 #- gcloud firebase test android versions list
@@ -47,8 +47,8 @@ before_script:
 script:
 
   "./firebase1.sh"
-env.global:
-- openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv
-  -in google-services.json.enc -out /tmp/google-services.json -d
-- openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv
-  -in google-services.json.enc -out google-services.json -d
+#env.global:
+#- openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv
+#  -in google-services.json.enc -out /tmp/google-services.json -d
+#- openssl aes-256-cbc -K $encrypted_702b7083e2d9_key -iv $encrypted_702b7083e2d9_iv
+#  -in google-services.json.enc -out google-services.json -d

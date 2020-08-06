@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Firebase service account decrypt
-- openssl aes-256-cbc -K $encrypted_6ccb8a696b2d_key -iv $encrypted_6ccb8a696b2d_iv -in weatherforecast-d2654-61fb91a5b94b.json.enc -out /tmp/weatherforecast-d2654-61fb91a5b94b.json -d
+- openssl aes-256-cbc -K $encrypted_6ccb8a696b2d_key -iv $encrypted_6ccb8a696b2d_iv -in weatherforecast-d2654-4cca52839c71.json.enc -out /tmp/weatherforecast-d2654-4cca52839c71.json -d
 
 
 # Firebase setup
@@ -18,7 +18,7 @@ gcloud config set project weatherforecast-d2654
 
 # Activate cloud credentials
 
-  - gcloud auth activate-service-account weatherforecastdemo@weatherforecast-d2654.iam.gserviceaccount.com --key-file= /tmp/weatherforecast-d2654-61fb91a5b94b.json --project=weatherforecast-d2654
+  - gcloud auth activate-service-account weatherforecastdemo@weatherforecast-d2654.iam.gserviceaccount.com --key-file /tmp/weatherforecast-d2654-4cca52839c71.json --project=weatherforecast-d2654
 
 # List available options for logging purpose only (so that we can review available options)
 
