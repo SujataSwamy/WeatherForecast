@@ -12,13 +12,13 @@ tar zxf /tmp/google-cloud-sdk.tar.gz --directory /opt
 source /opt/google-cloud-sdk/path.bash.inc
 
 # Setup and configure the project
-#gcloud components update
-#echo weatherforecast-d2654
-#gcloud config set project weatherforecast-d2654
+gcloud components update
+echo weatherforecast-d2654
+gcloud config set project weatherforecast-d2654
 
 # Activate cloud credentials
 
-#gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-4cca52839c71.json
+gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-4cca52839c71.json
 
 # List available options for logging purpose only (so that we can review available options)
 
