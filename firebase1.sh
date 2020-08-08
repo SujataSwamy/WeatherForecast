@@ -18,7 +18,7 @@ source /opt/google-cloud-sdk/path.bash.inc
 
 # Activate cloud credentials
 
-gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-4cca52839c71.json
+#gcloud auth activate-service-account --key-file /tmp/weatherforecast-d2654-4cca52839c71.json
 
 # List available options for logging purpose only (so that we can review available options)
 
