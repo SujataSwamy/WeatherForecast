@@ -23,7 +23,7 @@ gcloud firebase test android models list
 gcloud firebase test android versions list
 
 ./gradlew build assembleDebug
-gcloud firebase test android run --app app/build/outputs/apk/debug/app-debug.apk --type=robo --device model=Nexus4,version=26
+gcloud firebase test android run --app app/build/outputs/apk/debug/app-debug.apk --type=robo --device model=Pixel2,version=28
 
 
 
