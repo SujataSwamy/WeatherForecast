@@ -28,6 +28,8 @@ readonly GIT_HAS_CHANGES=1 # 0 = clean, 1 = dirty
 
 git diff --quiet; GIT_DIFF_STATUS=$?
 
+
+
 # If the GIT_DIFF_STATUS is 1 (GIT_HAS_CHANGES) then we know
 # there are changes and we can commit the changes and push
 # them to new branch
@@ -37,8 +39,8 @@ if [[ ${GIT_DIFF_STATUS} -eq ${GIT_HAS_CHANGES} ]]; then
 #    BRANCH_NAME="bot/$DAY/code-formatting"
 
 #    git checkout -b "$BRANCH_NAME"
-    git commit -am "$CURRENT_BRANCH"
-    git push -u origin "$CURRENT_BRANCH"
+    git commit -am master
+    git push -u origin master
 
     echo "::set-output name=branch_name::${BRANCH_NAME}"
 fi
