@@ -2,7 +2,6 @@ package com.weatherforecast.data.repository
 
 import com.weatherforecast.data.datasource.WeatherRemoteDataSource
 import com.weatherforecast.domain.model.Pojo
-import com.weatherforecast.domain.model.UIState
 import javax.inject.Singleton
 
 @Singleton

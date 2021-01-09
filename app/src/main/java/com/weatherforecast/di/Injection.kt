@@ -10,5 +10,4 @@ object Injection {
         checkNotNull(context)
         return WeatherRepository.getInstance(WeatherRemoteDataSource.instance)
     }
-
 }

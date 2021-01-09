@@ -4,7 +4,6 @@ import androidx.annotation.WorkerThread
 import com.weatherforecast.data.network.ApiClient
 import com.weatherforecast.data.network.WeatherRestService
 import com.weatherforecast.domain.model.Pojo
-import com.weatherforecast.domain.model.UIState
 
 /*
 Class that makes a remorte data call
@@ -24,7 +23,6 @@ class WeatherRemoteDataSource() {
     @WorkerThread
     suspend fun getWeatherInfo(placeName: String): Pojo? {
         val apiClient = ApiClient.client?.create(WeatherRestService::class.java)
-        return apiClient?.getWeatherInfo("us","business")
+        return apiClient?.getWeatherInfo("us", "business")
     }
-
 }

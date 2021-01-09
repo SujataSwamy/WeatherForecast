@@ -21,10 +21,29 @@
 # List available options for logging purpose only (so that we can review available options)
 #gcloud firebase test android models list
 #gcloud firebase test android versions list
-
+#
 ./gradlew build assembleDebug
 ./gradlew ktlintFormat
+readonly GIT_HAS_CHANGES=1 # 0 = clean, 1 = dirty
+
+git diff --quiet; GIT_DIFF_STATUS=$?
+
+# If the GIT_DIFF_STATUS is 1 (GIT_HAS_CHANGES) then we know
+# there are changes and we can commit the changes and push
+# them to new branch
+if [[ ${GIT_DIFF_STATUS} -eq ${GIT_HAS_CHANGES} ]]; then
+    DAY=$( date +%b-%d-%Y )
+    BRANCH_NAME="bot/$DAY/code-formatting"
+
+    git checkout -b "$BRANCH_NAME"
+    git commit -am "[BOT] Code formatting fixes"
+    git push -u origin "$BRANCH_NAME"
+
+    echo "::set-output name=branch_name::${BRANCH_NAME}"
+fi
+
 #gcloud firebase test android run --app app/build/outputs/apk/debug/app-debug.apk --type=robo --device model=Pixel2,version=28
+
 
 
 
