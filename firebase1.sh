@@ -37,7 +37,7 @@ if [[ ${GIT_DIFF_STATUS} -eq ${GIT_HAS_CHANGES} ]]; then
 #    BRANCH_NAME="bot/$DAY/code-formatting"
 
 #    git checkout -b "$BRANCH_NAME"
-    git commit -am "[BOT] Code formatting fixes"
+    git commit -am "$CURRENT_BRANCH"
     git push -u origin "$CURRENT_BRANCH"
 
     echo "::set-output name=branch_name::${BRANCH_NAME}"
