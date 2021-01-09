@@ -22,8 +22,8 @@
 #gcloud firebase test android models list
 #gcloud firebase test android versions list
 #
-#./gradlew build assembleDebug
-#./gradlew ktlintFormat
+./gradlew build assembleDebug
+./gradlew ktlintFormat
 readonly GIT_HAS_CHANGES=1 # 0 = clean, 1 = dirty
 
 git diff --quiet; GIT_DIFF_STATUS=$?
