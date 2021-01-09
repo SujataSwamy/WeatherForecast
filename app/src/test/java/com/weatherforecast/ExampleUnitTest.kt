@@ -1,7 +1,6 @@
 package com.weatherforecast
 
 import junit.framework.Assert.assertEquals
-import org.junit.Assert
 import org.junit.Test
 
 /**
