@@ -10,10 +10,10 @@ class WeatherUseCase(val weatherRepository: WeatherRepository) {
         weatherLiveData: MutableLiveData<UIState>
     ) {
         val weatherInfo = weatherRepository.getWeatherInfo(placeName)
-        if(weatherInfo?.totalResults != null){
+        if (weatherInfo?.totalResults != null) {
 //            weatherLiveData.value = UIState.hasData
 //            weatherLiveData.value = weatherInfo
-        }else{
+        } else {
 //            weatherLiveData.value = UIState.noData
         }
     }

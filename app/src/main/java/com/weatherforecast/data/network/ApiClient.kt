@@ -23,7 +23,7 @@ object ApiClient {
      * @param apiServiceClass
      * @param <T>
      * @return
-    </T> */
+     </T> */
     fun <T> getAPIService(apiServiceClass: Class<T>?): T {
         return client!!.create(apiServiceClass)
     }
@@ -46,16 +46,18 @@ object ApiClient {
                 .writeTimeout(DEFAULT_WRITE_TIMEOUT_IN_MS, TimeUnit.MILLISECONDS)
                 .readTimeout(DEFAULT_READ_TIMEOUT_IN_MS, TimeUnit.MILLISECONDS)
             oktHttpClient.addInterceptor(logging)
-            oktHttpClient.addInterceptor(object : Interceptor {
-                @Throws(IOException::class)
-                override fun intercept(chain: Interceptor.Chain): Response {
-                    val original: Request = chain.request()
-                    val request: Request = original.newBuilder()
-                        .method(original.method(), original.body())
-                        .build()
-                    return chain.proceed(request)
+            oktHttpClient.addInterceptor(
+                object : Interceptor {
+                    @Throws(IOException::class)
+                    override fun intercept(chain: Interceptor.Chain): Response {
+                        val original: Request = chain.request()
+                        val request: Request = original.newBuilder()
+                            .method(original.method(), original.body())
+                            .build()
+                        return chain.proceed(request)
+                    }
                 }
-            })
+            )
             if (retrofit == null) {
                 retrofit = Retrofit.Builder()
                     .baseUrl("http://newsapi.org/v2/")

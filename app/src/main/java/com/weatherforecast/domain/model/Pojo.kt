@@ -1,6 +1,5 @@
 package com.weatherforecast.domain.model
 
-
 class Pojo {
     var totalResults: String? = null
     lateinit var articles: Array<Articles>

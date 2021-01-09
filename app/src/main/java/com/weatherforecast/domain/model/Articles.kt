@@ -1,6 +1,5 @@
 package com.weatherforecast.domain.model
 
-
 class Articles {
     var publishedAt: String? = null
     var author: String? = null
