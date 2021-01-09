@@ -31,13 +31,14 @@ git diff --quiet; GIT_DIFF_STATUS=$?
 # If the GIT_DIFF_STATUS is 1 (GIT_HAS_CHANGES) then we know
 # there are changes and we can commit the changes and push
 # them to new branch
+CURRENT_BRANCH=$(git branch)
 if [[ ${GIT_DIFF_STATUS} -eq ${GIT_HAS_CHANGES} ]]; then
     DAY=$( date +%b-%d-%Y )
-    BRANCH_NAME="bot/$DAY/code-formatting"
+#    BRANCH_NAME="bot/$DAY/code-formatting"
 
-    git checkout -b "$BRANCH_NAME"
+#    git checkout -b "$BRANCH_NAME"
     git commit -am "[BOT] Code formatting fixes"
-    git push -u origin "$BRANCH_NAME"
+    git push -u origin "$CURRENT_BRANCH"
 
     echo "::set-output name=branch_name::${BRANCH_NAME}"
 fi
