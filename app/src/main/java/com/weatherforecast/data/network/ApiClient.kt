@@ -58,7 +58,7 @@ object ApiClient {
             })
             if (retrofit == null) {
                 retrofit = Retrofit.Builder()
-                    .baseUrl("http://api.weatherstack.com/")
+                    .baseUrl("http://newsapi.org/v2/")
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(oktHttpClient.build())

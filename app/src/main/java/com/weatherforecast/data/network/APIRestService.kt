@@ -1,5 +1,6 @@
 package com.weatherforecast.data.network
 
+import com.weatherforecast.domain.model.Pojo
 import com.weatherforecast.domain.model.UIState
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -18,9 +19,10 @@ interface WeatherRestService {
      * @param days     no. of days for forecast data
      * @return [<]
      */
-    @GET("current?" +"access_key=40385628c384f9452987ffa7cd63e791")
+    //http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=c9d1ca843e054a96b18a3851d805d2aa
+    @GET("top-headlines?apiKey=c9d1ca843e054a96b18a3851d805d2aa")
     suspend fun getWeatherInfo(
-        @Query("query") cityName: String?,
-        @Query("forecast_days") days: String?
-    ): UIState.LocationResponse?
+        @Query("country") cityName: String?,
+        @Query("category") days: String?
+    ): Pojo?
 }

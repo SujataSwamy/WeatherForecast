@@ -3,6 +3,7 @@ package com.weatherforecast.data.datasource
 import androidx.annotation.WorkerThread
 import com.weatherforecast.data.network.ApiClient
 import com.weatherforecast.data.network.WeatherRestService
+import com.weatherforecast.domain.model.Pojo
 import com.weatherforecast.domain.model.UIState
 
 /*
@@ -21,9 +22,9 @@ class WeatherRemoteDataSource() {
     }
 
     @WorkerThread
-    suspend fun getWeatherInfo(placeName: String): UIState.LocationResponse? {
+    suspend fun getWeatherInfo(placeName: String): Pojo? {
         val apiClient = ApiClient.client?.create(WeatherRestService::class.java)
-        return apiClient?.getWeatherInfo(placeName, "7")
+        return apiClient?.getWeatherInfo("us","business")
     }
 
 }
