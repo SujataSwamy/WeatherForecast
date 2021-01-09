@@ -23,4 +23,5 @@ interface WeatherRestService {
         @Query("country") cityName: String?,
         @Query("category") days: String?
     ): Pojo?
+
 }
