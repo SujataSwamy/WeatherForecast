@@ -7,8 +7,9 @@ import retrofit2.http.Query
 /**
  * This class is responsible for holding all APIs need to be invoked by the application.
  *
- * @author Sujata
+ * @author Sujata sujata
  */
+
 interface WeatherRestService {
     /**
      * Returns weather info response which will be observed by the callee.
