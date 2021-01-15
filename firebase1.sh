@@ -36,11 +36,11 @@ git diff --quiet; GIT_DIFF_STATUS=$?
 CURRENT_BRANCH=$(git branch)
 if [[ ${GIT_DIFF_STATUS} -eq ${GIT_HAS_CHANGES} ]]; then
     DAY=$( date +%b-%d-%Y )
-#    BRANCH_NAME="bot/$DAY/code-formatting"
+    BRANCH_NAME="bot/$DAY/code-formatting"
 
-#    git checkout -b "$BRANCH_NAME"
-    git commit -am master
-    git push -u origin master
+    git checkout -b "$BRANCH_NAME"
+    git commit -am "$BRANCH_NAME"
+    git push -u origin "$BRANCH_NAME"
 
     echo "::set-output name=branch_name::${BRANCH_NAME}"
 fi
