@@ -58,8 +58,8 @@ readonly GIT_HAS_CHANGES=1 # 0 = clean, 1 = dirty
 #USER_NAME="$1"
 #USER_EMAIL="$2"
 
-git config --global user.email "sujatagopalswamy@gmail.com"
-  git config --global user.name "sujataswamy"
+#git config --global user.email "sujatagopalswamy@gmail.com"
+#  git config --global user.name "sujataswamy"
 
 #git config user.name "$USER_NAME"
 #git config user.email "$USER_EMAIL"
