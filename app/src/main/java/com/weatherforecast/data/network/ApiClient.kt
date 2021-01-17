@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiClient {
 
-    private var retrofit:  Retrofit? = null
+    private var retrofit:  Retrofit? =  null
 
     /**
      * Returns the object for API handles classes with retrofit client.
