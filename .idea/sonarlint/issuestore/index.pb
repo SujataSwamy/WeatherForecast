@@ -33,3 +33,7 @@ x
 Happ/src/main/java/com/weatherforecast/data/network/WeatherRestService.kt,7/b/7bdf7d47530166a224e1826220118f82ad1ecb7b
 <
 firebase1.sh,3/b/3b3727193a840473df00d0e096d000ae0ebb5212
+e
+5app/src/main/java/com/weatherforecast/di/Injection.kt,d/d/dd494b4366dc02e4a628aafc770c264314022414
+s
+Capp/src/main/java/com/weatherforecast/di/WeatherViewModelFactory.kt,a/3/a3e149c08c17a0aab2213789cdd73b98bdf231b4
